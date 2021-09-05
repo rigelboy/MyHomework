@@ -7,21 +7,15 @@ public class for4xyear {
         Scanner s =new Scanner(System.in);
         System.out.println("请输入年份");
         year=s .nextInt();
-        System.out.println(year);
         for(int i=year;i<=year+100;i++)
         {
             // 可以被4整除，不被100整除    或者     可以被400整除的是闰年
             if((i%4==0&&i%100!=0)||(i%400==0)){
                 num++;
-                if(num%2==0)
-                {
-                    System.out.println(i);
-                }
-                else{
-                    System.out.print(i+" ");
-                }
+
             }
         }
+        System.out.println(num);
 
     }
 }
