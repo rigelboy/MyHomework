@@ -7,5 +7,8 @@ public class 测试类 {
         Rectangle rec =new Rectangle(4,5);
         System.out.println("rec的周长"+rec.getPerimeter());
         Shape sae =(Shape) cir;
+        MonteCarlo pi = new MonteCarlo();
+        double  pi1 = pi.getpi();
+        System.out.println("PI="+ pi1);
     }
 }
