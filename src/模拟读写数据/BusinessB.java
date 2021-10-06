@@ -9,9 +9,11 @@ public class BusinessB {
         this.iReadSaveData = iReadSaveData;
     }
     public void saveData(String data){
+
         iReadSaveData.saveData(data);
     }
     public String getdata(){
-       return iReadSaveData.getData();
+
+        return iReadSaveData.getData();
     }
 }
