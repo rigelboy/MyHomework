@@ -14,6 +14,7 @@ public class 希尔排序 {
                 while(j-gap>=0&&arr[j]<arr[j-gap]){
                     k=arr[j];
                     arr[j]=arr[j-gap];
+
                     arr[j-gap]=k;
                     j-=gap;
                 }

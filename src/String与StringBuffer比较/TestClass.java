@@ -5,7 +5,7 @@ public class TestClass {
         String s = new String("hello ");
         StringBuffer s1 = new StringBuffer("hello");
         double start = System.currentTimeMillis();
-        for(int i=0;i<10000;i++){
+        for(int i=0;i<10000;i++) {
             s = s.concat("hello");
         }
         double end = System.currentTimeMillis();

@@ -2,6 +2,7 @@ package 模拟读写数据;
 
 public class BusinessA {
     private IReadSaveData iReadSaveData;
+    private BusinessB hello;
     public IReadSaveData getiReadSaveData(){
         return iReadSaveData;
     };
@@ -17,6 +18,7 @@ public class BusinessA {
     public String getData(){
         return iReadSaveData.getData();
     }
+
 }
 
 
