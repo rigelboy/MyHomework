@@ -12,6 +12,7 @@ public class TextSearchFile {
         if (folder.isFile()){
             git.add(folder);
         }
+        //甄别关键字文件
         File[] subfiles =folder.listFiles(new FileFilter() {
             @Override
             public boolean accept(File file) {
@@ -29,7 +30,7 @@ public class TextSearchFile {
                 if(file.isFile()){
                     git.add(file);
                 }else{
-                    git.addAll(SearchFile(file,keyword));
+                    git.addAll(SearchFile(file,keyword));//是文件夹则用递归方法获得所有文件
                 }
 
             }
