@@ -1,7 +1,6 @@
 package FileTest;
 
 import java.io.File;
-import java.sql.SQLOutput;
 import java.util.Date;
 
 public class FileTest {
