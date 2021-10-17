@@ -1,8 +1,6 @@
-import java.io.File;
-import java.io.FileFilter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class TextSearchFile {
@@ -13,7 +11,7 @@ public class TextSearchFile {
             git.add(folder);
         }
         //甄别关键字文件
-        File[] subfiles =folder.listFiles(new FileFilter() {
+        File[] selectfiles =folder.listFiles(new FileFilter() {
             @Override
             public boolean accept(File file) {
                 if (file.isDirectory()){
@@ -25,8 +23,8 @@ public class TextSearchFile {
                 return false;
             }
         });
-        if(subfiles != null){
-            for (File file : subfiles) {
+        if(selectfiles != null){
+            for (File file : selectfiles) {
                 if(file.isFile()){
                     git.add(file);
                 }else{
@@ -35,12 +33,10 @@ public class TextSearchFile {
 
             }
         }
-
-
          return git;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner s =new Scanner(System.in);
         String k =s.next();
         Scanner sr = new Scanner(System.in);
@@ -48,6 +44,14 @@ public class TextSearchFile {
         List<File> files = SearchFile(new File(k),kr);
         for (File file : files) {
             System.out.println(file.getAbsolutePath());
+            FileInputStream  vs = new FileInputStream(file);
+            FileOutputStream vsc = new FileOutputStream(new File("C:\\Users\\wangjie\\Desktop\\"+file.getName()+1+".png"));
+            int num = 0 ;
+            num = vs.read();
+            vsc.write(num);
+            vsc.flush();
+            vs.close();
+            vsc.close();
         }
     }
 }

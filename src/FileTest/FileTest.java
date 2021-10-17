@@ -20,6 +20,7 @@ public class FileTest {
         File directory = new File("D:\\myjava\\chapter7\\1");
         System.out.println(directory.mkdirs());
         File dir = new File("D:\\myjava");
+
         String str[] = dir.list();
         for (int i = 0; i < str.length; i++) {
             System.out.println(str[i]);
