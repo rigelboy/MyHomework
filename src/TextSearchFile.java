@@ -22,6 +22,7 @@ public class TextSearchFile {
                 }
                 return false;
             }
+
         });
         if(selectfiles != null){
             for (File file : selectfiles) {
@@ -33,9 +34,8 @@ public class TextSearchFile {
 
             }
         }
-         return git;
+        return git;
     }
-
     public static void main(String[] args) throws IOException {
         Scanner s =new Scanner(System.in);
         String k =s.next();
