@@ -1,6 +1,7 @@
 package 泛型;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class GenericComplex {
@@ -32,10 +33,20 @@ public class GenericComplex {
         Vehicle vehicle = max(list2);
         System.out.println(vehicle.getSpeed());
         List<Bus> list3 = new ArrayList<Bus>();
-        list3.add(new Bus(20,"bule",1));
-        list3.add(new Bus(150,"black",1));
-        list3.add(new Bus(100,"green",1));
+        for (int i = 0; i < 10000000; i++) {
+            list3.add(new Bus(20,"bule",1));
+            list3.add(new Bus(280,"black",1));
+
+        }
+        double k1 = System.currentTimeMillis();
         Bus bus = max(list3);
+        Collections.sort(list3);
+        double k2 = System.currentTimeMillis();
+        for (int i = 0; i < 2000; i++) {
+            System.out.println(list3.get(i).getSpeed());
+        }
+
+        System.out.println(k2-k1);
 
     }
 }

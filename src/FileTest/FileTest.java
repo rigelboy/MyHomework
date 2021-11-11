@@ -7,6 +7,7 @@ public class FileTest {
     public static void main(String[] args) {
         int dirNum = 0,fileNum = 0;
         File file = new File("D:\\auto.txt");
+        String[] a = {"dwad","fwaf","fwaf","fgwa"};
         if(!file.exists()){
             try{
                 file.createNewFile();
@@ -20,7 +21,6 @@ public class FileTest {
         File directory = new File("D:\\myjava\\chapter7\\1");
         System.out.println(directory.mkdirs());
         File dir = new File("D:\\myjava");
-
         String str[] = dir.list();
         for (int i = 0; i < str.length; i++) {
             System.out.println(str[i]);
@@ -39,6 +39,5 @@ public class FileTest {
             }
         }
         file.delete();
-
     }
 }
