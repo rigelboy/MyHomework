@@ -146,7 +146,7 @@ public class LogMain extends JFrame  {
         });
         this.setSize(600,500);
         this.setVisible(true);
-        this.setLocationRelativeTo(null);
+
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
